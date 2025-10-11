@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bảng điều khiển</title>
+</head>
+<body>
+  <h1>Xin chào, bạn đã đăng nhập thành công!</h1>
+  <button id="logout">Đăng xuất</button>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+    import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAp_GKrqzBIH5RFTrKSakrt6_o9V23xV7k",
+      authDomain: "projectfschool.firebaseapp.com",
+      projectId: "projectfschool",
+      appId: "1:546456514153:web:PUT_YOUR_REAL_APPID_HERE"
+    };
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    onAuthStateChanged(auth, (user) => {
+      if (!user) window.location.href = 'index.html';
+    });
+
+    document.getElementById('logout').addEventListener('click', () => signOut(auth));
+  </script>
+</body>
+</html>

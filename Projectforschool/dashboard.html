@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard • Thi vào 10</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <!-- NAV sau khi hoàn tất -->
+  <nav class="app-nav" id="appNav">
+    <div class="app-menu">
+      <strong>Thi vào 10</strong>
+      <a href="#">Môn học</a>
+      <a href="#">Lộ trình</a>
+      <a href="#">Đề thi</a>
+      <a href="#">Kiểm tra</a>
+      <a href="#">Cam kết</a>
+    </div>
+    <div class="user-area">
+      <span id="userName">...</span>
+      <button class="logout" id="logout">Đăng xuất</button>
+    </div>
+  </nav>
+
+  <!-- ONBOARDING FLOW -->
+  <section class="onb" id="onboarding">
+    <div class="onb-header">
+      <div class="duo">
+        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4da.svg" alt="book" />
+      </div>
+      <span class="onb-sub">Thiết kế lộ trình học phù hợp cho bạn</span>
+    </div>
+
+    <div class="onb-body">
+      <div class="card">
+        <div class="prompt" id="prompt">Câu hỏi</div>
+        <div class="opt-list" id="optList"></div>
+        <div class="footer">
+          <button class="continue" id="btnNext" disabled>TIẾP TỤC</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN AREA SAU KHI HOÀN TẤT -->
+  <section class="main" id="mainArea">
+    <nav class="app-nav app-nav-inline">
+      <div class="app-menu">
+        <strong>Thi vào 10</strong>
+        <a href="#">Môn học</a>
+        <a href="#">Lộ trình</a>
+        <a href="#">Đề thi</a>
+        <a href="#">Kiểm tra</a>
+        <a href="#">Cam kết</a>
+      </div>
+      <div class="user-area">
+        <span id="userName2">...</span>
+        <button class="logout" id="logout2">Đăng xuất</button>
+      </div>
+    </nav>
+
+    <div class="hero-main">
+      <p class="pill">🎉 Hoàn tất khảo sát</p>
+      <h2 class="cele">Chúc mừng! Lộ trình học đã được thiết kế cho bạn.</h2>
+      <div class="placeholder">
+        Khu vực nội dung chính (để trống cho phần phát triển tiếp theo)
+      </div>
+    </div>
+  </section>
+
+  <!-- Firebase + app logic -->
+  <script type="module" src="dashboard.js"></script>
+</body>
+</html>

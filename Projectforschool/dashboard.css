@@ -1,0 +1,188 @@
+/* ========== Dashboard CSS (brand: #1976ff, nền sáng) ========== */
+:root{
+  /* Brand */
+  --brand: #1976ff;
+  --brand-600: #0d5fd1;
+  --brand-50:  #eaf3ff;
+
+  /* Surface & Ink */
+  --bg:        #f5f8ff;
+  --surface:   #ffffff;
+  --ink:       #0f172a;
+  --muted:     #5b6b82;
+
+  /* Border / Shadow / Radius */
+  --border:    #e6ecf7;
+  --shadow-sm: 0 4px 14px rgba(13, 95, 209, .08);
+  --shadow-md: 0 10px 30px rgba(13, 95, 209, .12);
+  --radius-lg: 18px;
+  --radius-xl: 28px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:'Inter',system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+/* ======================= NAV ======================= */
+.app-nav{
+  display:none;
+  align-items:center;
+  justify-content:space-between;
+  background: var(--brand);
+  color:#fff;
+  padding:.9rem 1.2rem;
+  border-bottom-left-radius: var(--radius-xl);
+  border-bottom-right-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+}
+.app-nav-inline{display:flex}
+.app-menu{display:flex;gap:1rem;align-items:center}
+.app-menu strong{font-weight:800}
+.app-menu a{
+  color:#eef5ff;text-decoration:none;font-weight:600;opacity:.95;
+  padding:.35rem .6rem;border-radius:10px;transition:background .2s,opacity .2s
+}
+.app-menu a:hover{opacity:1;background:rgba(255,255,255,.12)}
+.user-area{display:flex;gap:.6rem;align-items:center}
+.logout{
+  background:#fff;color:var(--brand);border:1px solid transparent;
+  padding:.55rem 1.1rem;border-radius:999px;font-weight:700;cursor:pointer;
+  box-shadow: var(--shadow-sm); transition:transform .08s, background .2s
+}
+.logout:hover{background:#f4f8ff}
+.logout:active{transform:scale(.98)}
+
+/* ============== ONBOARDING OVERLAY (sáng) ============== */
+.onb{
+  position:fixed; inset:0; display:flex; flex-direction:column;
+  background:
+    radial-gradient(1000px 500px at 10% -10%, rgba(25,118,255,.10), transparent 60%),
+    radial-gradient(1000px 500px at 90% -20%, rgba(25,118,255,.08), transparent 60%),
+    var(--bg);
+  color: var(--ink);
+}
+.onb-header{display:flex;align-items:center;gap:12px;padding:1rem}
+.duo{
+  width:54px;height:54px;border-radius:16px;
+  background:#ffffff; display:grid;place-items:center;
+  box-shadow: var(--shadow-sm); border:1px solid var(--border)
+}
+.duo img{width:36px;height:36px}
+.onb-sub{color:var(--muted);font-weight:600}
+
+.onb-body{
+  flex:1; display:flex; align-items:center; justify-content:center;
+  padding:1.4rem;
+}
+.card{
+  width:min(980px,94vw);
+  background: var(--surface);
+  border:1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding:1.6rem 1.6rem 1.2rem;
+}
+.prompt{
+  font-size:1.25rem; font-weight:800; color:#08223e; margin:.2rem 0 1rem 66px;
+  position:relative;
+}
+.prompt::before{
+  content:""; position:absolute; left:-56px; top:-6px;
+  width:44px;height:44px; border-radius:12px;
+  background: linear-gradient(135deg, var(--brand), var(--brand-600));
+  box-shadow: 0 6px 18px rgba(25,118,255,.28);
+}
+
+/* ============== Options ============== */
+.opt-list{max-height:430px; overflow:auto; padding-right:.5rem}
+.opt{
+  display:flex; align-items:center; gap:14px;
+  background:#fff; border:1px solid var(--border);
+  border-radius:16px; padding:18px 20px; color:#15263f; margin:.72rem 0;
+  cursor:pointer; transition: transform .12s ease, border-color .2s, box-shadow .2s, background .2s;
+  box-shadow: var(--shadow-sm);
+}
+.opt:hover{
+  transform:translateY(-1px);
+  border-color:#d6e4ff; box-shadow:0 12px 28px rgba(13,95,209,.10);
+  background:#fbfdff;
+}
+.opt .bars{display:flex;gap:4px}
+.bar{
+  width:6px;height:16px;border-radius:3px;background:#d3e4ff
+}
+.bar:nth-child(2){height:18px}
+.bar:nth-child(3){height:22px}
+.bar:nth-child(4){height:26px}
+.opt.active{
+  outline:2px solid rgba(25,118,255,.35); background:#f2f7ff;
+  border-color:#c8dbff; box-shadow: 0 14px 34px rgba(25,118,255,.18);
+}
+
+/* ============== Footer / Continue ============== */
+.footer{display:flex;justify-content:flex-end;align-items:center;padding:1rem 0 0}
+.continue{
+  background:#e7efff; color:#6b7d91; border:1px solid #d9e6ff;
+  padding:.95rem 1.65rem; border-radius:999px; font-weight:900; letter-spacing:.3px;
+  opacity:.8; transform:scale(.98); cursor:not-allowed; transition: all .2s;
+  box-shadow: var(--shadow-sm);
+}
+.continue.ready{
+  background: var(--brand); color:#fff; border-color: transparent;
+  opacity:1; cursor:pointer; transform:scale(1);
+}
+.continue.ready:hover{background: var(--brand-600)}
+.continue:active{transform:scale(.98)}
+
+/* Ẩn/hiện khu vực */
+.hidden{display:none !important}
+
+/* ======================= MAIN AREA ======================= */
+.main{display:none; padding:2rem 1rem 4rem}
+.hero-main{
+  max-width:1100px; margin:1.4rem auto;
+  background:#fff; border:1px solid var(--border);
+  border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);
+  padding:1.4rem;
+}
+.placeholder{
+  height:48vh; border:2px dashed #cfe0ff; border-radius:14px;
+  display:grid; place-items:center; color:#5e7aa6; background:#f9fbff;
+}
+.cele{font-size:1.6rem; margin:.5rem 0 1rem; color:#0e2547}
+.pill{
+  display:inline-block; background:#e8fff2; color:#10783a; border:1px solid #b9f5cf;
+  padding:.35rem .7rem; border-radius:999px; font-weight:700
+}
+
+/* ======================= Scrollbar (nhẹ) ======================= */
+.opt-list::-webkit-scrollbar{width:10px}
+.opt-list::-webkit-scrollbar-track{background:#f3f7ff;border-radius:8px}
+.opt-list::-webkit-scrollbar-thumb{background:#cfe0ff;border-radius:8px}
+.opt-list::-webkit-scrollbar-thumb:hover{background:#bad2ff}
+
+/* ======================= Focus & A11y ======================= */
+.opt:focus-visible,
+.logout:focus-visible,
+.continue:focus-visible{
+  outline: 3px solid rgba(25,118,255,.45);
+  outline-offset: 2px;
+}
+
+/* ======================= Reduced Motion ======================= */
+@media (prefers-reduced-motion: reduce){
+  .opt,.logout,.continue{transition:none}
+}
+
+/* ======================= Responsive ======================= */
+@media (max-width: 900px){
+  .app-menu{gap:.7rem}
+  .prompt{margin-left:58px}
+  .card{padding:1.1rem}
+  .continue{padding:.85rem 1.4rem}
+}

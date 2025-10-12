@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lộ trình Ôn thi vào Lớp 10 toàn diện</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a class="brand" href="#" aria-label="Trang chủ">
+      <img src="logoweb.png" alt="Logo" class="brand-logo" />
+    </a>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href="#mon">Môn học</a></li>
+        <li><a href="#lo-trinh">Lộ trình học</a></li>
+        <li><a href="#de-thi">Đề thi thử</a></li>
+        <li><a href="#kiem-tra">Kiểm tra kiến thức</a></li>
+        <li><a href="#cam-ket">Cam kết kết quả</a></li>
+      </ul>
+    </nav>
+    <div class="actions">
+      <button class="btn ghost" id="openLogin">Đăng nhập</button>
+      <button class="btn outline" id="openSignup">Đăng ký</button>
+      <button class="btn btn-primary" data-click="start">Bắt đầu học</button>
+    </div>
+    <button class="hamburger" aria-label="Mở menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="intro">
+    <div class="hero-content reveal">
+      <span class="chip">KHÓA ÔN THI LỚP 10</span>
+      <h1>Lộ trình Ôn thi vào <span class="accent">Lớp 10</span> toàn diện</h1>
+      <p class="lead">
+        Nền tảng ôn thi thông minh – Giúp học sinh chinh phục kỳ thi vào lớp 10 với phương pháp khoa học, cá nhân hóa và hiệu quả.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-secondary" href="#lo-trinh">Thiết kế lộ trình học</a>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal" role="img" aria-label="Học sinh ôn thi lớp 10">
+      <img src="h1.png" alt="Học sinh ôn thi lớp 10" class="hero-img" />
+      <div class="welcome" aria-hidden="true">📘 Sẵn sàng ôn thi!</div>
+      <div class="grid-bg" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features" id="lo-trinh">
+    <div class="container">
+      <h2 class="reveal">Lộ trình ôn luyện cá nhân hóa</h2>
+      <p class="reveal">Hệ thống tự động xác định điểm mạnh, điểm yếu và gợi ý kế hoạch học tập phù hợp cho từng học sinh.</p>
+      <div class="feature-grid">
+        <article class="card reveal">
+          <h3>Kiểm tra năng lực đầu vào</h3>
+          <p>Phân tích khả năng hiện tại giúp chọn đúng cấp độ học và môn cần cải thiện.</p>
+        </article>
+        <article class="card reveal">
+          <h3>Ngân hàng đề thi chất lượng</h3>
+          <p>Được biên soạn bởi giáo viên giàu kinh nghiệm, sát cấu trúc đề thi thật.</p>
+        </article>
+        <article class="card reveal">
+          <h3>Cam kết tiến bộ</h3>
+          <p>Theo dõi tiến trình, nhắc học thông minh và đảm bảo mục tiêu điểm số.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Nền tảng Ôn thi Lớp 10. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="#">Chính sách</a></li>
+        <li><a href="#">Điều khoản</a></li>
+        <li><a href="#">Liên hệ</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- MODAL AUTH -->
+  <div class="modal" id="authModal" aria-hidden="true">
+    <div class="backdrop" id="authBackdrop"></div>
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+      <button class="close" id="closeModal" aria-label="Đóng">×</button>
+
+      <div class="form-switcher" role="tablist">
+        <button id="loginTab" class="switch-tab active" role="tab" aria-selected="true">Đăng nhập</button>
+        <button id="signupTab" class="switch-tab" role="tab" aria-selected="false">Đăng ký</button>
+      </div>
+
+      <!-- Login form -->
+      <form id="loginForm" class="auth-form">
+        <h2 id="authTitle">Đăng nhập</h2>
+
+        <button type="button" class="btn social" id="googleSignIn">
+          <img src="google.svg" alt="" aria-hidden="true" />
+          Đăng nhập với Google
+        </button>
+
+        <div class="hr-or"><span>hoặc</span></div>
+
+        <label class="field">
+          <span>Email</span>
+          <input type="email" id="loginEmail" placeholder="ban@example.com" required />
+        </label>
+
+        <label class="field">
+          <span>Mật khẩu</span>
+          <input type="password" id="loginPassword" placeholder="••••••••" required />
+        </label>
+
+        <button type="submit" class="btn btn-primary full">Đăng nhập</button>
+      </form>
+
+      <!-- Signup form -->
+      <form id="signupForm" class="auth-form hidden" autocomplete="on">
+        <h2>Tạo tài khoản</h2>
+
+        <label class="field">
+          <span>Họ và tên</span>
+          <input type="text" id="fullName" placeholder="Nguyễn Văn A" required />
+        </label>
+
+        <label class="field">
+          <span>Lớp</span>
+          <input type="text" id="className" placeholder="9A1 / 9A2 / 9B..." required />
+        </label>
+
+        <label class="field">
+          <span>Email</span>
+          <input type="email" id="signupEmail" placeholder="ban@example.com" required />
+        </label>
+
+        <label class="field">
+          <span>Mật khẩu</span>
+          <input type="password" id="signupPassword" placeholder="Tối thiểu 8 ký tự" minlength="8" required />
+        </label>
+
+        <button type="submit" class="btn btn-primary full">Đăng ký</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Firebase Auth logic -->
+  <script type="module" src="firebase-auth.js"></script>
+  <!-- UI / hiệu ứng -->
+  <script src="script.js"></script>
+</body>
+</html>

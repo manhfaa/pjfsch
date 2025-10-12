@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lộ Trình Học • Thi vào 10</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="study-plan.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="app-nav">
+    <div class="app-menu">
+      <strong>Thi vào 10</strong>
+      <a href="#" class="active">Lộ trình</a>
+      <a href="#">Môn học</a>
+      <a href="#">Đề thi</a>
+      <a href="#">Kiểm tra</a>
+      <a href="#">Cam kết</a>
+    </div>
+    <div class="user-area">
+      <span id="userName">...</span>
+      <button class="logout" id="logout">Đăng xuất</button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="study-plan-container">
+    <!-- Header Section -->
+    <section class="plan-header">
+      <div class="header-content">
+        <div class="welcome-badge">
+          <span class="pill">🎉 Lộ trình cá nhân hóa</span>
+        </div>
+        <h1 class="main-title">Chào mừng bạn đến với lộ trình học!</h1>
+        <p class="subtitle">Dựa trên thông tin khảo sát, chúng tôi đã thiết kế lộ trình học tập tối ưu nhất cho bạn</p>
+      </div>
+      <div class="header-stats">
+        <div class="stat-card">
+          <div class="stat-icon">📚</div>
+          <div class="stat-info">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Môn học chính</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">⏱️</div>
+          <div class="stat-info">
+            <span class="stat-number">12</span>
+            <span class="stat-label">Tuần học</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🎯</div>
+          <div class="stat-info">
+            <span class="stat-number">8.5+</span>
+            <span class="stat-label">Mục tiêu</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Progress Overview -->
+    <section class="progress-section">
+      <div class="section-header">
+        <h2>Tổng quan tiến độ</h2>
+        <p>Theo dõi hành trình chinh phục kỳ thi vào 10 của bạn</p>
+      </div>
+      <div class="progress-cards">
+        <div class="progress-card">
+          <div class="progress-circle" data-percent="25">
+            <svg class="circle-chart" viewBox="0 0 36 36">
+              <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+              <path class="circle" stroke-dasharray="25, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+              <text x="18" y="20.35" class="percentage">25%</text>
+            </svg>
+          </div>
+          <div class="progress-info">
+            <h3>Toán học</h3>
+            <p>Đã hoàn thành 5/20 chuyên đề</p>
+            <div class="progress-details">
+              <span class="progress-text">Tiến độ: 25%</span>
+              <button class="continue-btn">Tiếp tục học</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="progress-card">
+          <div class="progress-circle" data-percent="15">
+            <svg class="circle-chart" viewBox="0 0 36 36">
+              <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+              <path class="circle" stroke-dasharray="15, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+              <text x="18" y="20.35" class="percentage">15%</text>
+            </svg>
+          </div>
+          <div class="progress-info">
+            <h3>Ngữ Văn</h3>
+            <p>Đã hoàn thành 3/20 chuyên đề</p>
+            <div class="progress-details">
+              <span class="progress-text">Tiến độ: 15%</span>
+              <button class="continue-btn">Tiếp tục học</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="progress-card">
+          <div class="progress-circle" data-percent="10">
+            <svg class="circle-chart" viewBox="0 0 36 36">
+              <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+              <path class="circle" stroke-dasharray="10, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+              <text x="18" y="20.35" class="percentage">10%</text>
+            </svg>
+          </div>
+          <div class="progress-info">
+            <h3>Tiếng Anh</h3>
+            <p>Đã hoàn thành 2/20 chuyên đề</p>
+            <div class="progress-details">
+              <span class="progress-text">Tiến độ: 10%</span>
+              <button class="continue-btn">Tiếp tục học</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Weekly Schedule -->
+    <section class="schedule-section">
+      <div class="section-header">
+        <h2>Lộ trình tuần này</h2>
+        <p>Kế hoạch học tập từ Thứ 2 đến Chủ Nhật</p>
+      </div>
+      <div class="week-schedule">
+        <div class="day-card">
+          <div class="day-header">
+            <span class="day-name">Thứ 2</span>
+            <span class="date">10/02</span>
+          </div>
+          <div class="tasks">
+            <div class="task completed">
+              <span class="task-subject">Toán</span>
+              <span class="task-name">Hàm số bậc nhất</span>
+            </div>
+            <div class="task current">
+              <span class="task-subject">Văn</span>
+              <span class="task-name">Phân tích thơ</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-card">
+          <div class="day-header">
+            <span class="day-name">Thứ 3</span>
+            <span class="date">11/02</span>
+          </div>
+          <div class="tasks">
+            <div class="task">
+              <span class="task-subject">Anh</span>
+              <span class="task-name">Thì hiện tại</span>
+            </div>
+            <div class="task">
+              <span class="task-subject">Toán</span>
+              <span class="task-name">Hệ phương trình</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-card">
+          <div class="day-header">
+            <span class="day-name">Thứ 4</span>
+            <span class="date">12/02</span>
+          </div>
+          <div class="tasks">
+            <div class="task">
+              <span class="task-subject">Văn</span>
+              <span class="task-name">Nghị luận xã hội</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-card">
+          <div class="day-header">
+            <span class="day-name">Thứ 5</span>
+            <span class="date">13/02</span>
+          </div>
+          <div class="tasks">
+            <div class="task">
+              <span class="task-subject">Toán</span>
+              <span class="task-name">Hình học</span>
+            </div>
+            <div class="task">
+              <span class="task-subject">Anh</span>
+              <span class="task-name">Từ vựng chủ đề</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-card">
+          <div class="day-header">
+            <span class="day-name">Thứ 6</span>
+            <span class="date">14/02</span>
+          </div>
+          <div class="tasks">
+            <div class="task">
+              <span class="task-subject">Văn</span>
+              <span class="task-name">Truyện ngắn</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-card">
+          <div class="day-header">
+            <span class="day-name">Thứ 7</span>
+            <span class="date">15/02</span>
+          </div>
+          <div class="tasks">
+            <div class="task">
+              <span class="task-subject">Toán</span>
+              <span class="task-name">Luyện đề</span>
+            </div>
+            <div class="task">
+              <span class="task-subject">Anh</span>
+              <span class="task-name">Nghe hiểu</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-card">
+          <div class="day-header">
+            <span class="day-name">CN</span>
+            <span class="date">16/02</span>
+          </div>
+          <div class="tasks">
+            <div class="task">
+              <span class="task-subject">Ôn tập</span>
+              <span class="task-name">Tổng kết tuần</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recommended Resources -->
+    <section class="resources-section">
+      <div class="section-header">
+        <h2>Tài liệu đề xuất</h2>
+        <p>Tài liệu học tập phù hợp với lộ trình của bạn</p>
+      </div>
+      <div class="resources-grid">
+        <div class="resource-card">
+          <div class="resource-icon">📘</div>
+          <div class="resource-content">
+            <h3>Chuyên đề Toán 9</h3>
+            <p>Toàn bộ kiến thức trọng tâm thi vào 10</p>
+            <div class="resource-meta">
+              <span class="resource-type">PDF</span>
+              <span class="resource-pages">120 trang</span>
+            </div>
+          </div>
+          <button class="download-btn">Tải về</button>
+        </div>
+
+        <div class="resource-card">
+          <div class="resource-icon">📗</div>
+          <div class="resource-content">
+            <h3>Ngữ pháp Tiếng Anh</h3>
+            <p>Tổng hợp ngữ pháp thi vào 10</p>
+            <div class="resource-meta">
+              <span class="resource-type">PDF</span>
+              <span class="resource-pages">85 trang</span>
+            </div>
+          </div>
+          <button class="download-btn">Tải về</button>
+        </div>
+
+        <div class="resource-card">
+          <div class="resource-icon">🎬</div>
+          <div class="resource-content">
+            <h3>Video bài giảng</h3>
+            <p>Hệ thống video dạy học chất lượng cao</p>
+            <div class="resource-meta">
+              <span class="resource-type">Video</span>
+              <span class="resource-pages">50+ bài</span>
+            </div>
+          </div>
+          <button class="download-btn">Xem ngay</button>
+        </div>
+
+        <div class="resource-card">
+          <div class="resource-icon">📝</div>
+          <div class="resource-content">
+            <h3>Đề thi thử</h3>
+            <p>Bộ đề thi thử các năm có đáp án</p>
+            <div class="resource-meta">
+              <span class="resource-type">PDF</span>
+              <span class="resource-pages">25 đề</span>
+            </div>
+          </div>
+          <button class="download-btn">Tải về</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Study Tips -->
+    <section class="tips-section">
+      <div class="section-header">
+        <h2>Mẹo học tập hiệu quả</h2>
+        <p>Áp dụng ngay để đạt kết quả tốt nhất</p>
+      </div>
+      <div class="tips-grid">
+        <div class="tip-card">
+          <div class="tip-icon">⏰</div>
+          <h3>Quản lý thời gian</h3>
+          <p>Chia nhỏ thời gian học, nghỉ ngơi hợp lý để tăng hiệu quả</p>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">📖</div>
+          <h3>Học chủ động</h3>
+          <p>Tự đặt câu hỏi và tìm câu trả lời thay vì học vẹt</p>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">🔄</div>
+          <h3>Ôn tập định kỳ</h3>
+          <p>Thường xuyên ôn lại kiến thức cũ để ghi nhớ lâu hơn</p>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">🎯</div>
+          <h3>Tập trung mục tiêu</h3>
+          <p>Luôn nhớ mục tiêu ban đầu để giữ vững động lực</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Firebase + app logic -->
+  <script type="module" src="study-plan.js"></script>
+</body>
+</html>
